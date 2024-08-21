@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Styling Appointment</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Hair Styling Appointment</h1>
+    <p>Select a time for your hair styling appointment:</p>
+    <form action="/book" method="post">
+        <input type="hidden" name="service" value="hair">
+        <ul>
+            <% bookings.forEach(booking => { %>
+                <% const isBooked = bookedTimes.some(bt => bt.time === booking.time); %>
+                <% if (isBooked) { %>
+                    <li><strike><%= booking.time %></strike> (Booked)</li>
+                <% } else { %>
+                    <li><label><input type="radio" name="time" value="<%= booking.time %>"> <%= booking.time %></label></li>
+                <% } %>
+            <% }) %>
+        </ul>
+        <button type="submit">Book</button>
+    </form>
+    <a href="/dashboard">Back to Home</a>
+</body>
+</html>

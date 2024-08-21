@@ -3,11 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Salon Landing Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-color: #808080; /* General gray color */
+            height: 400px;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 100%;
+            margin: 0 auto;
+            flex-grow: 1;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .service {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 32%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .service a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .service a:hover {
+            background-color: #ff3b2e;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <h2>Welcome to your dashboard</h2>
+
+<header>
+    Welcome to Salon Elegance
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
     <a href="/logout">Logout</a>
+</nav>
+
+<div class="hero">
+    <div>
+        <h1>Luxury Beauty &amp; Care</h1>
+        <p>Your beauty, our passion.</p>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service">
+            <h2>Hair Styling</h2>
+            <p>Experience the best haircuts and styling with our professional stylists.</p>
+            <a href="/services/hair">Book Now</a>
+        </div>
+        <div class="service">
+            <h2>Manicure &amp; Pedicure</h2>
+            <p>Pamper your hands and feet with our exquisite manicure and pedicure services.</p>
+            <a href="/services/manicure">Book Now</a>
+        </div>
+        <div class="service">
+            <h2>Facial Treatments</h2>
+            <p>Rejuvenate your skin with our personalized facial treatments.</p>
+            <a href="/services/facial">Book Now</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Salon Elegance. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
